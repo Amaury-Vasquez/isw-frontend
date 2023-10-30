@@ -1,20 +1,25 @@
 import clsx from "clsx";
+import { useRef } from "react";
 import { useCookies } from "react-cookie";
 import { MdPalette } from "react-icons/md";
-import { useToggle } from "@/hooks";
+import { useOnClickOutside, useToggle } from "@/hooks";
 
 const THEMES = ["dark", "synthwave", "forest", "emerald"];
 
 export default function ThemeMenu() {
   const { isActive, toggle, willAnimate } = useToggle(false);
   const [_, setCookie] = useCookies(["theme"]);
-
+  const ref = useRef(null);
+  const onClickOutside = () => {
+    if (isActive) toggle();
+  };
+  useOnClickOutside(ref, onClickOutside);
   const changeTheme = (theme: string) => {
     setCookie("theme", theme);
   };
 
   return (
-    <div className="relative w-fit h-fit">
+    <div className="relative w-fit h-fit" ref={ref}>
       <button className="btn btn-circle btn-ghost" onClick={toggle}>
         <MdPalette className="w-6 h-6" />
       </button>

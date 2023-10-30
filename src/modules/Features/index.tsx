@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { IconType } from "react-icons";
-import { HiOutlineTicket } from "react-icons/hi";
+import { HiOutlineCalendar, HiOutlineTicket } from "react-icons/hi";
+import { IoBrushOutline } from "react-icons/io5";
+import {
+  MdOutlinePlace,
+  MdOutlineAttachMoney,
+  MdWorkspacePremium,
+} from "react-icons/md";
 
 interface IFeature {
   name: string;
@@ -16,22 +22,27 @@ const FEATURES: IFeature[] = [
   },
   {
     name: "Gestion de actividades",
-    Icon: HiOutlineTicket,
+    Icon: HiOutlineCalendar,
+    path: "/admin/activities",
+  },
+  {
+    name: "Gestion de visitas",
+    Icon: MdOutlinePlace,
     path: "/admin/activities",
   },
   {
     name: "Gestion del personal",
-    Icon: HiOutlineTicket,
+    Icon: MdWorkspacePremium,
     path: "/admin/employees",
   },
   {
     name: "Informacion financiera",
-    Icon: HiOutlineTicket,
+    Icon: MdOutlineAttachMoney,
     path: "/admin/financial",
   },
   {
     name: "Mantenimiento y nuevas exhibiciones",
-    Icon: HiOutlineTicket,
+    Icon: IoBrushOutline,
     path: "/admin/maintenance",
   },
 ];
@@ -44,7 +55,7 @@ export default function Features() {
           <Link
             href={path}
             key={name + idx}
-            className="flex w-full flex-col p-4 shadow-lg rounded-lg gap-6 items-center border border-solid border-base-200 text-center"
+            className="flex w-full h-full flex-col p-4 shadow-lg rounded-lg gap-6 items-center border border-solid border-base-200 text-center hover:bg-opacity-70 hover:bg-base-200 transition-colors justify-between"
           >
             <span className="font-semibold text-xl">{name}</span>
             <Icon className="w-12 h-12 text-primary" />
