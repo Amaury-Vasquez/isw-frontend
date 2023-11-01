@@ -9,7 +9,7 @@ interface ProtectedRouteProps {
 export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const [cookies] = useCookies(["user"]);
 
-  if (!cookies.user) {
+  if (cookies.user) {
     return (
       <main className="min-h-content flex w-full items-center justify-center">
         <div className="card shadow-lg bg-base-200 px-8 py-6 text-center gap-6">

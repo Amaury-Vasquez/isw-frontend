@@ -55,7 +55,7 @@ export default function Features() {
           <Link
             href={path}
             key={name + idx}
-            className="flex w-full h-full flex-col p-4 shadow-lg rounded-lg gap-6 items-center border border-solid border-base-200 text-center hover:bg-opacity-70 hover:bg-base-200 transition-colors justify-between"
+            className="flex w-full h-full flex-col p-4 shadow-lg rounded-lg gap-6 items-center bg-base-200 text-center hover:bg-opacity-70 hover:bg-base-200 transition-colors justify-between"
           >
             <span className="font-semibold text-xl">{name}</span>
             <Icon className="w-12 h-12 text-primary" />
