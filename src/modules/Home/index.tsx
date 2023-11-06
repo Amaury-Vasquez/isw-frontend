@@ -30,13 +30,19 @@ export default function Home() {
               <Subtitle text="Contacto" Icon={AiOutlineContacts} />
               <p>
                 {"Teléfono: "}
-                <a href={`tel:${PHONE_NUMBER}`} className="link link-info">
+                <a
+                  href={`tel:${PHONE_NUMBER}`}
+                  className="link link-info no-underline"
+                >
                   {PHONE_NUMBER}
                 </a>
               </p>
               <p>
                 {"Correo: "}
-                <a href={`mailto:${EMAIL}`} className="link link-info">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="link link-info no-underline"
+                >
                   museouniversitario@gmail.com
                 </a>
               </p>
