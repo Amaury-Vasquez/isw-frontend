@@ -9,7 +9,7 @@ interface ProtectedRouteProps {
 export default function ProtectedRoute({ children }: ProtectedRouteProps) {
   const [cookies] = useCookies(["user"]);
 
-  if (cookies.user) {
+  if (!cookies.user) {
     return (
       <main className="min-h-content flex w-full items-center justify-center">
         <div className="card shadow-lg bg-base-200 px-8 py-6 text-center gap-6">
@@ -20,10 +20,10 @@ export default function ProtectedRoute({ children }: ProtectedRouteProps) {
             * Inicia sesion para poder acceder
           </span>
           <div className="flex items-center w-full gap-4 justify-around">
-            <Link className="btn btn-primary w-1/2" href="/login">
+            <Link className="btn btn-primary w-1/2" href="/admin/login">
               Iniciar sesion
             </Link>
-            <Link className="btn btn-secondary w-1/2" href="/register">
+            <Link className="btn btn-secondary w-1/2" href="/admin/register">
               Registrarme
             </Link>
           </div>
