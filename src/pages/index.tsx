@@ -5,8 +5,8 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> Administrador del Museo - Inicio </title>
-        <meta name="description" content="Administrador del Museo - Inicio" />
+        <title> Museo Universitario - Inicio </title>
+        <meta name="description" content="Museo Universitario - Inicio" />
       </Head>
       <Home />
     </>

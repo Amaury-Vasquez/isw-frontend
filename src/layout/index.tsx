@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
     }
   }, [cookies, setCookie]);
   return (
-    <div className="min-h-screen w-screen bg-base-100">
+    <div className="min-h-screen w-full bg-base-100 max-w-full flex flex-col box-border">
       <Header />
       {children}
     </div>

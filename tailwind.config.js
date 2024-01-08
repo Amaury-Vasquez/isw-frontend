@@ -34,10 +34,21 @@ module.exports = {
             transformOrigin: "top right",
           },
         },
+        "fade-in": {
+          from: {
+            opacity: "0",
+            filter: "blur(5px)",
+          },
+          to: {
+            opacity: "1",
+            filter: "blur(0)",
+          },
+        },
       },
       animation: {
         "collapse-down-left": "collapse-down-left 0.3s ease-out",
         "collapse-up-right": "collapse-up-right 0.3s ease-in",
+        "fade-in": "fade-in 0.3s ease-in",
       },
     },
   },

@@ -16,7 +16,7 @@ import Subtitle from "./Subtitle";
 
 export default function Home() {
   return (
-    <div className="bg-[url(https://i.imgur.com/VxXSyR5.jpg)] min-h-content bg-no-repeat bg-center bg-cover">
+    <div className="min-h-content bg-no-repeat bg-center bg-cover">
       <main className="bg-base-300 bg-opacity-90 min-h-content w-full">
         <article className="m-auto flex flex-col p-6 text-center max-w-6xl gap-y-6">
           <h1 className="text-2xl font-bold">
